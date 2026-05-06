@@ -19,10 +19,11 @@ const Cards = (props) => {
         <div className="ml-6 mt-2">
           <h3> Company : {props.company}</h3>
         </div>
-        <div className="pl-25 text-2xl mt-5 w-80 h-10 rounded-full  bg-amber-300 active:scale-90">
-            <Link to={`/${props.eid}`}><button className="p-1" >Click me</button></Link>
+       <Link to={`/user/${props.eid}`}> <div className="pl-25 text-2xl mt-5 w-80 h-10 rounded-full  bg-amber-300 ">
+            <button className="p-1 active:scale-90" >Click me</button>
             <h3>{props.eid}</h3>
         </div>
+        </Link>
       </div>
     </div>
   );

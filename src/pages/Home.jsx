@@ -3,6 +3,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import Cards from '../components/Cards';
 import Loader from '../components/Loader';
+import { Outlet } from 'react-router-dom';
 
 
 const Home = () => {
@@ -23,10 +24,13 @@ console.log(`${cars}`);
     {cars.length>0?(
       cars.map((e)=>(
         <Cards eid={e.id} fname={e.firstName} lname={e.lastName} age={e.age} company={e.company.name} phone={e.phone} image={e.image}/>
+        
       ))
+     
     ):(<Loader />)}
     
    </div>
+
     
   )
 }
