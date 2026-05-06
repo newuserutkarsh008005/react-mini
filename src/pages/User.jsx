@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Loader from "../components/Loader";
-
+import { Link } from "react-router-dom";
 const User = () => {
 
   const [user, setUser] = useState(null);
@@ -87,13 +87,21 @@ const User = () => {
 
           </div>
 
-          <div className="mt-5 w-full">
+          <div className="mt-5 w-full flex">
 
-            <button className="h-full w-[80%] bg-amber-800 p-2 ml-10 rounded-4xl active:scale-110">
+            <button className="h-full w-[50%] bg-amber-800 p-2 ml-2 rounded-4xl active:scale-110  active:bg-amber-600">
 
               Add to Favourite
 
             </button>
+            <Link to='/'>
+            <button className=" h-full w-full bg-amber-800 p-2 ml-10 rounded-4xl active:scale-110 active:bg-amber-600">
+
+              Go Back to Home 
+
+
+            </button>
+            </Link>
 
           </div>
 
