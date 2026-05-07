@@ -5,7 +5,7 @@ const Nav = () => {
   return (
     <div className='bg-blue-400 h-20 w-full text-2xl text-amber-50 '>
         <div className='flex'>
-      <div className='text-4xl p-4 font-extrabold font-serif active:scale-105'>
+      <div className='text-4xl p-3 font-extrabold font-serif active:scale-105'>
         Company XYZ
       </div>
       <div className='ml-200 p-5 '>

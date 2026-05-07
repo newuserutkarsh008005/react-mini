@@ -30,7 +30,33 @@ const User = () => {
   useEffect(() => {
     getdata();
   }, []);
+function favourite(){
+let storage=window.localStorage;
 
+
+  const fuser={
+    id:user.id,
+    name:`${user.firstName} ${user.lastName}`,
+    img:`${user.image}`,
+    age:`${user.age}`,
+    email:`${user.email}`,
+    company:`${user.company?.name}`,
+    university:`${user.university}`,
+    address:`${user.address?.city}`
+
+  };
+if(storage.getItem(user.id)){
+  alert("User already in Favourite");
+}
+else{
+
+storage.setItem(user.id,JSON.stringify(fuser));
+alert("Saved to Favourite");
+}
+
+
+
+}
   return (
 
     val ? (
@@ -45,7 +71,7 @@ const User = () => {
             <div className="h-52 w-52 overflow-hidden rounded-full border-4">
 
               <img
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover bg-amber-50"
                 src={user.image}
                 alt=""
               />
@@ -89,7 +115,10 @@ const User = () => {
 
           <div className="mt-5 w-full flex">
 
-            <button className="h-full w-[50%] bg-amber-800 p-2 ml-2 rounded-4xl active:scale-110  active:bg-amber-600">
+            <button
+            onClick={favourite}
+
+            className="h-full w-[50%] bg-amber-800 p-2 ml-2 rounded-4xl active:scale-110  active:bg-amber-600">
 
               Add to Favourite
 

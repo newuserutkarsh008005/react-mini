@@ -7,7 +7,7 @@ import Favourite from './pages/Favourite'
 import User from './pages/User'
 const App = () => {
   return (
-    <div className='h-screen w-screen bg-black'>
+    <div className='h-full w-screen bg-black'>
     
     <Nav />
     <Routes>
