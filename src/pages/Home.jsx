@@ -20,7 +20,7 @@ useEffect(()=>{
 },[])
 console.log(`${cars}`);
   return (
-   <div className='text-black flex flex-wrap bg-black pl-15 mt-10'>
+   <div className='text-black flex flex-wrap bg-black pl-15 mt-10 h-full'>
     {cars.length>0?(
       cars.map((e)=>(
         <Cards eid={e.id} fname={e.firstName} lname={e.lastName} age={e.age} company={e.company.name} phone={e.phone} image={e.image}/>
