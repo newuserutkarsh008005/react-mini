@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Loader from "../components/Loader";
 import { Link } from "react-router-dom";
+import toast, { Toaster } from 'react-hot-toast';
 const User = ({ theme, setTheme }) => {
 
   const [user, setUser] = useState(null);
@@ -45,22 +46,22 @@ let storage=window.localStorage;
     address:`${user.address?.city}`
 
   };
-if(storage.getItem(user.id)){
-  alert("User already in Favourite");
+if (storage.getItem(user.id)) {
+  toast.error('Already Saved!');
+} else {
+  storage.setItem(user.id, JSON.stringify(fuser));
+  toast.success('Saved Successfully!');
 }
-else{
-
-storage.setItem(user.id,JSON.stringify(fuser));
-alert("Saved to Favourite");
-}
-
 
 
 }
   return (
+<>
+<Toaster />
 
-    val ? (
-
+   { val ? (
+      
+     
       <div className={`
       
       h-screen w-[85%] flex justify-center items-center
@@ -159,8 +160,8 @@ ${theme
 
       <Loader />
 
-    )
-
+    )}
+</>
   );
 };
 

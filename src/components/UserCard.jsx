@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import toast, { Toaster } from 'react-hot-toast';
 const UserCard = (props) => {
  
   
@@ -10,11 +10,11 @@ function removeUser(id){
 }
  
   return (
-    <div className="flex flex-wrap m-10 gap-10 h-fit p-2">
-      <div className="h-[80%] w-80 bg-indigo-400 m-10 mt-5 ml-15 rounded-2xl shadow-lg p-5">
+    <div className="w-full sm:w-80 m-2">
+      <div className="bg-indigo-400 rounded-2xl shadow-lg p-5 h-full flex flex-col justify-between">
 
         {/* Image */}
-        <div className="h-40 w-40 overflow-hidden pb-3 ml-13">
+        <div className="h-40 w-40 overflow-hidden pb-3 mx-auto">
           <img
             src={props.img}
             className="h-full w-full object-cover rounded-full border bg-amber-50 p-1 mt-2"
@@ -23,11 +23,11 @@ function removeUser(id){
         </div>
 
         {/* User Info */}
-        <div className="mt-8 ml-6 text-xl">
+        <div className="mt-6 text-center text-xl px-2">
           <h1 className="font-bold">{props.name}</h1>
         </div>
 
-        <div className="ml-6 mt-3 space-y-2 text-md">
+        <div className="mt-3 space-y-2 text-md px-4">
           <h3>
             <span className="font-semibold">ID:</span> {props.id}
           </h3>
@@ -54,18 +54,22 @@ function removeUser(id){
         </div>
 
         {/* Button */}
-        <div className="flex w-full h-full flex-wrap">
-        <Link to={`/user/${props.id}`}>
-          <div className="mt-6 mx-6 p-3 w-fit h-fit rounded-full bg-teal-400 flex items-center justify-center text-xl cursor-pointer active:scale-95 transition">
-            <button className="ml-5 mr-5 " >View Profile</button>
-          </div>
-        </Link>
-        <div className="mt-6 mx-6  w-fit p-3 h-fit rounded-full bg-red-300 flex items-center justify-center text-xl cursor-pointer active:scale-95 transition">
-            <button 
-            onClick={() => props.removeUser(props.id)}
-            className="ml-5 mr-5 ">Remove </button>
-          </div>
-      </div></div>
+        <div className="mt-4 w-full flex gap-4 justify-center">
+          <Link to={`/user/${props.id}`} className="flex-1">
+            <button className="w-full py-2 rounded-full bg-teal-400 text-white">View Profile</button>
+          </Link>
+
+          <button
+            onClick={() => {
+              props.removeUser(props.id);
+              toast.success('Removed Successfully!');
+            }}
+            className="flex-1 py-2 rounded-full bg-red-300 text-white"
+          >
+            Remove
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
