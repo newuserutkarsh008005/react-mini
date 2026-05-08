@@ -20,7 +20,13 @@ let alluser=[]
   setUserdet(alluser);
   
 }
- 
+ function removeUser(id){
+  localStorage.removeItem(id)
+  const updateduser=userdet.filter(
+(user)=>user.id!==id
+  );
+  setUserdet(updateduser)
+ }
 useEffect(function(){
 getfav();
 },[])
@@ -46,6 +52,7 @@ getfav();
           company={user.company}
           university={user.university}
           address={user.address}
+          removeUser={removeUser}
         />
       ))}
     </div>

@@ -5,13 +5,10 @@ const UserCard = (props) => {
  
   
   
-
+function removeUser(id){
+   console.log("I am inside Favourite");
+}
  
-  function remove(){
-      localStorage.removeItem(props.id);
-      window.location.reload()
-      alert("User removed")
-  }
   return (
     <div className="flex flex-wrap m-10 gap-10 h-fit p-2">
       <div className="h-[80%] w-80 bg-indigo-200 m-10 mt-12 ml-15 rounded-2xl shadow-lg p-5">
@@ -65,7 +62,7 @@ const UserCard = (props) => {
         </Link>
         <div className="mt-6 mx-6  w-fit p-3 h-fit rounded-full bg-amber-300 flex items-center justify-center text-xl cursor-pointer active:scale-95 transition">
             <button 
-            onClick={remove}
+            onClick={() => props.removeUser(props.id)}
             className="ml-5 mr-5 ">Remove </button>
           </div>
       </div></div>
