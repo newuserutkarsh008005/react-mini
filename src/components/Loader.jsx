@@ -4,11 +4,10 @@ const Loader = () => {
   return (
     <div className=' h-full w-full'>
     <DotLottieReact
-      src="https://lottie.host/4c8c8ec6-2c54-419d-b531-e6ee5edd8871/VY0nC9heOo.lottie"
+      src="https://lottie.host/5c3011ab-7a73-4931-aafc-14b3751f311d/ojPMAGsEk3.lottie"
       loop
       autoplay
     />
-   
     </div>
   )
 }

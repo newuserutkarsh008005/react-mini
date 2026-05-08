@@ -16,7 +16,7 @@ const Nav = ({ theme, setTheme }) => {
       <div className='text-4xl p-3 font-extrabold font-serif active:scale-105'>
         Company XYZ
       </div>
-      <div className='ml-180 p-5 flex '>
+      <div className='ml-170 p-5 flex '>
         <Link className='ml-10 active:scale-105' to='/'>Home</Link>
         <Link className='ml-10 active:scale-105' to='about'>About</Link>
         <Link className='ml-10 active:scale-105' to='favoutite'>Favoutite</Link>

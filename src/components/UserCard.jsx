@@ -11,13 +11,13 @@ function removeUser(id){
  
   return (
     <div className="flex flex-wrap m-10 gap-10 h-fit p-2">
-      <div className="h-[80%] w-80 bg-indigo-400 m-10 mt-12 ml-15 rounded-2xl shadow-lg p-5">
+      <div className="h-[80%] w-80 bg-indigo-400 m-10 mt-5 ml-15 rounded-2xl shadow-lg p-5">
 
         {/* Image */}
-        <div className="h-40 w-60 overflow-hidden ml-8">
+        <div className="h-40 w-40 overflow-hidden pb-3 ml-13">
           <img
             src={props.img}
-            className="h-full w-full object-cover rounded-b-full mt-2"
+            className="h-full w-full object-cover rounded-full border bg-amber-50 p-1 mt-2"
             alt={props.name}
           />
         </div>
