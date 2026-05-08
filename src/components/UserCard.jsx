@@ -11,7 +11,7 @@ function removeUser(id){
  
   return (
     <div className="flex flex-wrap m-10 gap-10 h-fit p-2">
-      <div className="h-[80%] w-80 bg-indigo-200 m-10 mt-12 ml-15 rounded-2xl shadow-lg p-5">
+      <div className="h-[80%] w-80 bg-indigo-400 m-10 mt-12 ml-15 rounded-2xl shadow-lg p-5">
 
         {/* Image */}
         <div className="h-40 w-60 overflow-hidden ml-8">
@@ -56,11 +56,11 @@ function removeUser(id){
         {/* Button */}
         <div className="flex w-full h-full flex-wrap">
         <Link to={`/user/${props.id}`}>
-          <div className="mt-6 mx-6 p-3 w-fit h-fit rounded-full bg-amber-300 flex items-center justify-center text-xl cursor-pointer active:scale-95 transition">
+          <div className="mt-6 mx-6 p-3 w-fit h-fit rounded-full bg-teal-400 flex items-center justify-center text-xl cursor-pointer active:scale-95 transition">
             <button className="ml-5 mr-5 " >View Profile</button>
           </div>
         </Link>
-        <div className="mt-6 mx-6  w-fit p-3 h-fit rounded-full bg-amber-300 flex items-center justify-center text-xl cursor-pointer active:scale-95 transition">
+        <div className="mt-6 mx-6  w-fit p-3 h-fit rounded-full bg-red-300 flex items-center justify-center text-xl cursor-pointer active:scale-95 transition">
             <button 
             onClick={() => props.removeUser(props.id)}
             className="ml-5 mr-5 ">Remove </button>

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Loader from "../components/Loader";
 import { Link } from "react-router-dom";
-const User = () => {
+const User = ({ theme, setTheme }) => {
 
   const [user, setUser] = useState(null);
   const [val, isValue] = useState(false);
@@ -61,9 +61,26 @@ alert("Saved to Favourite");
 
     val ? (
 
-      <div className="h-screen w-full bg-violet-500 flex justify-center items-center">
+      <div className={`
+      
+      h-screen w-[85%] flex justify-center items-center
+${theme
+          ? 'bg-white text-black'
+          : 'bg-black text-white'
+      }
+      `}>
 
-        <div className="h-[90%] w-[40%] bg-teal-300 rounded-3xl p-10 shadow-2xl">
+        <div className={
+`
+h-[90%] w-[40%] rounded-3xl p-10 shadow-2xl
+${theme
+          ? 'bg-pink-200 text-black'
+          : 'bg-teal-400 text-grey'
+      }
+
+`
+
+        }>
 
           {/* Image */}
           <div className="h-[35%] w-full flex justify-center">

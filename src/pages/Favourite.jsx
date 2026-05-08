@@ -2,7 +2,9 @@ import { all } from 'axios';
 import React, { useEffect, useState } from 'react'
 import UserCard from '../components/UserCard';
 
-const Favourite = () => {
+const Favourite = ({ theme, setTheme }) => {
+ 
+  
   const[userdet,setUserdet]=useState([])
   function getfav(){
 
@@ -36,8 +38,15 @@ getfav();
  
   
   return (
-    <div className='bg-black h-screen'>
-    <div className='h-full w-full flex justify-center align-middle flex-wrap bg-black'>
+    <div className={` h-screen
+    
+    ${theme
+          ? 'bg-white text-black'
+          : 'bg-black text-white'
+      }
+   
+      ` }  >
+    <div className='h-full w-full flex justify-center align-middle flex-wrap '>
       
       
         
@@ -53,6 +62,7 @@ getfav();
           university={user.university}
           address={user.address}
           removeUser={removeUser}
+          theme={theme}
         />
       ))}
     </div>
