@@ -22,7 +22,7 @@ ${theme?'bg-green-400':'bg-gray-400'}
             >
 
                 <div
-                    className={`h-4 w-4 rounded-full bg-white absolute   top-1.5 transition-all duration-300 ${
+                    className={`h-4 w-4 rounded-full bg-white absolute  border-gray-500 top-1.5 transition-all duration-300 ${
                         theme ? 'left-11' : 'left-2'
                     }`}
                 >
