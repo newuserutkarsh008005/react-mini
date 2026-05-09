@@ -11,12 +11,19 @@ const Tgb = ({ theme, setTheme }) => {
 
             <div
                 onClick={change}
-                className='h-8 w-18 rounded-2xl bg-amber-300 border relative cursor-pointer'
+                className={
+`{
+h-8 w-18 rounded-2xl border relative cursor-pointer
+${theme?'bg-green-400':'bg-gray-400'}
+}`
+
+
+                }
             >
 
                 <div
-                    className={`h-4 w-4 rounded-full bg-black absolute top-2 transition-all duration-300 ${
-                        theme ? 'left-12' : 'left-2'
+                    className={`h-4 w-4 rounded-full bg-white absolute   top-1.5 transition-all duration-300 ${
+                        theme ? 'left-11' : 'left-2'
                     }`}
                 >
                 </div>
