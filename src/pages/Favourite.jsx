@@ -50,9 +50,9 @@ getfav();
     <Toaster position="top-center" />
    
     <div className={`${theme ? 'bg-white text-black' : 'bg-black text-white'} w-full min-h-screen py-8`}>
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4 ">
         {userdet.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-80 ">
+          <div className=" gap-10 flex flex-wrap">
             {userdet.map((user) => (
               <UserCard
                 key={user.id}

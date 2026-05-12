@@ -9,7 +9,7 @@ function clicked(){
   }
 const Nav = ({ theme, setTheme }) => {
   return (
-    <div className={`bg-blue-500 h-20 w-full text-2xl text-amber-50
+    <div className={`bg-blue-500 h-20 w-screen text-2xl text-amber-50
     ${theme?'bg-blue-400 text-black':'bg-black text-white'}`
     }>
         <div className='flex'>

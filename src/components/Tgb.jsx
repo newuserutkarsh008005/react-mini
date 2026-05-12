@@ -7,7 +7,7 @@ const Tgb = ({ theme, setTheme }) => {
     }
 
     return (
-        <div className='ml-8 mb-5'>
+        <div className='ml-8 '>
 
             <div
                 onClick={change}
