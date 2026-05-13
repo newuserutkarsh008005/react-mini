@@ -66,6 +66,7 @@ getfav();
                 address={user.address}
                 removeUser={removeUser}
                 theme={theme}
+                color={user.id}
               />
             ))}
           </div>
